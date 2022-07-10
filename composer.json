@@ -1,0 +1,41 @@
+{
+    "name": "osiemsiedem/laravel-imagor",
+    "description": "Imagor integration for Laravel.",
+    "keywords": ["laravel", "imagor", "vips", "libvips", "image", "processing"],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "OsiemSiedem\\Imagor\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Marek Szymczuk",
+            "email": "marek@osiemsiedem.com",
+            "homepage": "http://osiemsiedem.com"
+        }
+    ],
+    "require-dev": {
+        "laravel/pint": "^0.2.1",
+        "pestphp/pest": "^1.21",
+        "orchestra/testbench": "^7.6",
+        "phpstan/phpstan": "^1.8"
+    },
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^9.19"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "OsiemSiedem\\Imagor\\ImagorServiceProvider"
+            ],
+            "aliases": {
+                "Imagor": "OsiemSiedem\\Imagor\\Facades\\Imagor"
+            }
+        }
+    }
+}
