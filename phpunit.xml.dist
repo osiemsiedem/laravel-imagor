@@ -5,7 +5,7 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Laravel Imaggor Test Suite">
+        <testsuite name="Laravel Imagor Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

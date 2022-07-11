@@ -5,9 +5,16 @@ declare(strict_types=1);
 use OsiemSiedem\Imagor\Filters\Format;
 
 test('format', function ($value, $expected) {
-    $filter = new Format($value);
+    $builder = new class
+    {
+        use Format;
 
-    expect($filter)->toEqual("format({$expected})");
+        public array $filters = [];
+    };
+
+    $builder->format($value);
+
+    expect($builder->filters['format'])->toEqual("format({$expected})");
 })->with([
     ['avif', 'avif'],
     ['gif', 'gif'],
@@ -20,5 +27,12 @@ test('format', function ($value, $expected) {
 ]);
 
 it('throws exception for unsupported formats', function () {
-    new Format('psd');
+    $builder = new class
+    {
+        use Format;
+
+        public array $filters = [];
+    };
+
+    $builder->format('psd');
 })->throws(InvalidArgumentException::class);

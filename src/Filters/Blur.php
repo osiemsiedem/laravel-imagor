@@ -14,8 +14,18 @@ trait Blur
      */
     public function blur(float|int $sigma): self
     {
-        $this->filters['blur'] = sprintf('blur(%g)',
-            min(max($sigma, 0.000001), 10000)
+        $this->filters['blur'] = sprintf(
+            'blur(%s)',
+            rtrim(
+                rtrim(
+                    sprintf(
+                        '%.6f',
+                        min(max($sigma, 0.000001), 10000)
+                    ),
+                    '0'
+                ),
+                '.'
+            )
         );
 
         return $this;

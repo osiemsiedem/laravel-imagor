@@ -58,7 +58,7 @@ class UrlBuilder
     /**
      * The new size of the image.
      *
-     * @var array<string, mixed>
+     * @var array<string, int|null>
      */
     protected array $size = [];
 

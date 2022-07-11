@@ -5,9 +5,16 @@ declare(strict_types=1);
 use OsiemSiedem\Imagor\Filters\BackgroundColor;
 
 test('background_color', function ($value, $expected) {
-    $filter = new BackgroundColor($value);
+    $builder = new class
+    {
+        use BackgroundColor;
 
-    expect($filter)->toEqual("background_color({$expected})");
+        public array $filters = [];
+    };
+
+    $builder->backgroundColor($value);
+
+    expect($builder->filters['background_color'])->toEqual("background_color({$expected})");
 })->with([
     ['red', 'red'],
     ['white', 'white'],

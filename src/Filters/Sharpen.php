@@ -14,8 +14,18 @@ trait Sharpen
      */
     public function sharpen(float|int $sigma): self
     {
-        $this->filters['sharpen'] = sprintf('sharpen(%g)',
-            min(max($sigma, 0.000001), 10000)
+        $this->filters['sharpen'] = sprintf(
+            'sharpen(%s)',
+            rtrim(
+                rtrim(
+                    sprintf(
+                        '%.6f',
+                        min(max($sigma, 0.000001), 10000)
+                    ),
+                    '0'
+                ),
+                '.'
+            )
         );
 
         return $this;

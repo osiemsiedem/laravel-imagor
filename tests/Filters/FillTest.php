@@ -4,10 +4,17 @@ declare(strict_types=1);
 
 use OsiemSiedem\Imagor\Filters\Fill;
 
-test('background_color', function ($value, $expected) {
-    $filter = new Fill($value);
+test('fill', function ($value, $expected) {
+    $builder = new class
+    {
+        use Fill;
 
-    expect($filter)->toEqual("fill({$expected})");
+        public array $filters = [];
+    };
+
+    $builder->fill($value);
+
+    expect($builder->filters['fill'])->toEqual("fill({$expected})");
 })->with([
     ['red', 'red'],
     ['white', 'white'],

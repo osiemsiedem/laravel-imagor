@@ -5,13 +5,20 @@ declare(strict_types=1);
 use OsiemSiedem\Imagor\Filters\Hue;
 
 test('hue', function ($value, $expected) {
-    $filter = new Hue($value);
+    $builder = new class
+    {
+        use Hue;
 
-    expect($filter)->toEqual("hue({$expected})");
+        public array $filters = [];
+    };
+
+    $builder->hue($value);
+
+    expect($builder->filters['hue'])->toEqual("hue({$expected})");
 })->with([
-    [-1, 0],
-    [0, 0],
-    [275, 275],
-    [360, 360],
-    [500, 360],
+    [-1, '0'],
+    [0, '0'],
+    [275, '275'],
+    [360, '360'],
+    [500, '360'],
 ]);

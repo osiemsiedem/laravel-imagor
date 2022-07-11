@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-use OsiemSiedem\Imagor\Filters\Brightness;
+use OsiemSiedem\Imagor\Filters\Saturation;
 
-test('brightness', function ($value, $expected) {
+test('saturation', function ($value, $expected) {
     $builder = new class
     {
-        use Brightness;
+        use Saturation;
 
         public array $filters = [];
     };
 
-    $builder->brightness($value);
+    $builder->saturation($value);
 
-    expect($builder->filters['brightness'])->toEqual("brightness({$expected})");
+    expect($builder->filters['saturation'])->toEqual("saturation({$expected})");
 })->with([
     [-101, '-100'],
     [-100, '-100'],
