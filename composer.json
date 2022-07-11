@@ -37,5 +37,10 @@
                 "Imagor": "OsiemSiedem\\Imagor\\Facades\\Imagor"
             }
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
