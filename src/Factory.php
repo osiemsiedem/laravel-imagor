@@ -10,10 +10,10 @@ class Factory
      * Create a new factory instance.
      *
      * @param  string  $baseUrl
-     * @param  \OsiemSiedem\Imagor\PathSigner  $signer
+     * @param  \OsiemSiedem\Imagor\PathSigner|null  $signer
      * @return void
      */
-    public function __construct(protected string $baseUrl, protected PathSigner $signer)
+    public function __construct(protected string $baseUrl, protected ?PathSigner $signer = null)
     {
         //
     }
