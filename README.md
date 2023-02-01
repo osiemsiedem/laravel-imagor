@@ -1,4 +1,4 @@
-# Laravel Imagor
+# Imagor for Laravel
 
 Imagor integration for Laravel.
 
