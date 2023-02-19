@@ -9,9 +9,6 @@ trait Rgb
     /**
      * Set the amount of color in each of the channels.
      *
-     * @param  int  $red
-     * @param  int  $green
-     * @param  int  $blue
      * @return $this
      */
     public function rgb(int $red, int $green, int $blue): self
@@ -27,9 +24,6 @@ trait Rgb
 
     /**
      * Parse the channel.
-     *
-     * @param  int  $channel
-     * @return int
      */
     protected function parseChannel(int $channel): int
     {

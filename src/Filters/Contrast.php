@@ -9,7 +9,6 @@ trait Contrast
     /**
      * Apply the contrast adjustment to the image.
      *
-     * @param  int  $amount
      * @return $this
      */
     public function contrast(int $amount): self

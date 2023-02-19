@@ -9,10 +9,6 @@ trait RoundCorner
     /**
      * Add the watermark to the image.
      *
-     * @param  string  $image
-     * @param  int  $rx
-     * @param  int|null  $ry
-     * @param  string|null  $color
      * @return $this
      */
     public function roundCorner(int $rx, ?int $ry = null, ?string $color = null): self

@@ -9,7 +9,6 @@ trait Fill
     /**
      * Set the fill color of the missing area.
      *
-     * @param  string  $color
      * @return $this
      */
     public function fill(string $color): self

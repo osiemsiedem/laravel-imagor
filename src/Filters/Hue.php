@@ -9,7 +9,6 @@ trait Hue
     /**
      * Apply the hue adjustment to the image.
      *
-     * @param  int  $angle
      * @return $this
      */
     public function hue(int $angle): self

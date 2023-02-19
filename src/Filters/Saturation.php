@@ -9,7 +9,6 @@ trait Saturation
     /**
      * Apply the saturation adjustment to the image.
      *
-     * @param  int  $amount
      * @return $this
      */
     public function saturation(int $amount): self

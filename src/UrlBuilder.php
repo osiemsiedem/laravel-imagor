@@ -36,22 +36,16 @@ class UrlBuilder
 
     /**
      * Indicates if the surrounding empty space should be removed.
-     *
-     * @var bool
      */
     protected bool $trim = false;
 
     /**
      * Indicates if the image should not be auto-cropped.
-     *
-     * @var bool
      */
     protected bool $fitIn = false;
 
     /**
      * Indicates if the image should be resized without keeping its aspect ratio.
-     *
-     * @var bool
      */
     protected bool $stretch = false;
 
@@ -64,8 +58,6 @@ class UrlBuilder
 
     /**
      * Indicates if the image should use smart detection of focal points.
-     *
-     * @var bool
      */
     protected bool $smart = false;
 
@@ -78,15 +70,12 @@ class UrlBuilder
 
     /**
      * The URL to the image.
-     *
-     * @var string
      */
     protected string $image;
 
     /**
      * Create a new builder instance.
      *
-     * @param  string  $baseUrl
      * @return void
      */
     public function __construct(protected string $baseUrl)
@@ -133,8 +122,6 @@ class UrlBuilder
     /**
      * Resize the image to the given width and height.
      *
-     * @param  int|null  $width
-     * @param  int|null  $height
      * @return $this
      */
     public function size(?int $width, ?int $height): self
@@ -162,7 +149,6 @@ class UrlBuilder
     /**
      * Set the URL to the image.
      *
-     * @param  string  $url
      * @return $this
      */
     public function image(string $url): self
@@ -174,8 +160,6 @@ class UrlBuilder
 
     /**
      * Build the URL to the image.
-     *
-     * @return string
      */
     public function build(): string
     {
@@ -242,8 +226,6 @@ class UrlBuilder
 
     /**
      * Build the URL to the image.
-     *
-     * @return string
      */
     public function __toString(): string
     {

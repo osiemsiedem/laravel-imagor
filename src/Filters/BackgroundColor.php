@@ -9,7 +9,6 @@ trait BackgroundColor
     /**
      * Set the background color of the image.
      *
-     * @param  string  $color
      * @return $this
      */
     public function backgroundColor(string $color): self

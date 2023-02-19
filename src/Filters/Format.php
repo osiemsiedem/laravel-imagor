@@ -11,7 +11,6 @@ trait Format
     /**
      * Set the output format of the image.
      *
-     * @param  string  $format
      * @return $this
      */
     public function format(string $format): self

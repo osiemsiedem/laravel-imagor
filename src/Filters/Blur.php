@@ -9,7 +9,6 @@ trait Blur
     /**
      * Apply the gaussian blur to the image.
      *
-     * @param  float|int  $sigma
      * @return $this
      */
     public function blur(float|int $sigma): self

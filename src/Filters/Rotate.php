@@ -9,7 +9,6 @@ trait Rotate
     /**
      * Rotate the image.
      *
-     * @param  int  $angle
      * @return $this
      */
     public function rotate(int $angle): self

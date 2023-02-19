@@ -76,4 +76,3 @@ it('supports "smart" parameter', function () {
 
     expect($builder->build())->toEqual('http://example.com/unsafe/smart/image.jpg');
 });
-

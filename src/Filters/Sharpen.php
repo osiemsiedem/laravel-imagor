@@ -9,7 +9,6 @@ trait Sharpen
     /**
      * Apply the sharpen to the image.
      *
-     * @param  float|int  $sigma
      * @return $this
      */
     public function sharpen(float|int $sigma): self

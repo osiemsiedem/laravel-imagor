@@ -9,7 +9,6 @@ trait MaxBytes
     /**
      * Set the maximum size (in bytes) of the image.
      *
-     * @param  int  $bytes
      * @return $this
      */
     public function maxBytes(int $bytes): self

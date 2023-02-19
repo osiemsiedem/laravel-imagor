@@ -9,7 +9,6 @@ class Factory
     /**
      * Create a new factory instance.
      *
-     * @param  string  $baseUrl
      * @param  \OsiemSiedem\Imagor\PathSigner|null  $signer
      * @return void
      */
@@ -21,7 +20,6 @@ class Factory
     /**
      * Create a new URL builder instance.
      *
-     * @param  string  $image
      * @return \OsiemSiedem\Imagor\UrlBuilder
      */
     public function make(string $image): UrlBuilder

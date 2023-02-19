@@ -9,12 +9,6 @@ trait Watermark
     /**
      * Add the watermark to the image.
      *
-     * @param  string  $image
-     * @param  string|int  $x
-     * @param  string|int  $y
-     * @param  int  $alpha
-     * @param  int|null  $widthRatio
-     * @param  int|null  $heightRatio
      * @return $this
      */
     public function watermark(string $image, string|int $x, string|int $y, int $alpha, ?int $widthRatio = null, ?int $heightRatio = null): self

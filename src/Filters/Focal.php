@@ -9,10 +9,6 @@ trait Focal
     /**
      * Set the focal region.
      *
-     * @param  float|int  $left
-     * @param  float|int  $top
-     * @param  float|int  $right
-     * @param  float|int  $bottom
      * @return $this
      */
     public function focal(float|int $left, float|int $top, float|int $right, float|int $bottom): self
@@ -29,9 +25,6 @@ trait Focal
 
     /**
      * Parse the coordinate.
-     *
-     * @param  float|int  $value
-     * @return float|int
      */
     protected function parseCoordinate(float|int $value): float|int
     {

@@ -9,7 +9,6 @@ trait Proportion
     /**
      * Scale the image by a percentage of the original image size.
      *
-     * @param  int  $percentage
      * @return $this
      */
     public function proportion(int $percentage): self

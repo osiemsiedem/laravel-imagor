@@ -6,7 +6,6 @@ if (! function_exists('imagor')) {
     /**
      * Imagor helper.
      *
-     * @param  string  $image
      * @return \OsiemSiedem\Imagor\UrlBuilder
      */
     function imagor(string $image)

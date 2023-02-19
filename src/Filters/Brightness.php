@@ -9,7 +9,6 @@ trait Brightness
     /**
      * Apply the brightness adjustment to the image.
      *
-     * @param  int  $amount
      * @return $this
      */
     public function brightness(int $amount): self

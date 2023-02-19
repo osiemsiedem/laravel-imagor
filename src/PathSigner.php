@@ -9,7 +9,6 @@ class PathSigner
     /**
      * Create a new signer instance.
      *
-     * @param  string  $key
      * @return void
      */
     public function __construct(protected string $key)
@@ -19,9 +18,6 @@ class PathSigner
 
     /**
      * Sign the given path.
-     *
-     * @param  string  $path;
-     * @return string
      */
     public function sign(string $path): string
     {

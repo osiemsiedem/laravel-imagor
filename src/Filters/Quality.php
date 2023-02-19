@@ -9,7 +9,6 @@ trait Quality
     /**
      * Set the image compression quality.
      *
-     * @param  int  $quality
      * @return $this
      */
     public function quality(int $quality): self
